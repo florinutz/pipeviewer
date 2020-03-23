@@ -1,7 +1,7 @@
+use crossbeam::channel::Receiver;
 use std::{
     fs::File,
     io::{self, BufWriter, ErrorKind, Result, Write},
-    sync::mpsc::Receiver,
 };
 
 pub fn write_loop(outfile: &str, write_rx: Receiver<Vec<u8>>) -> Result<()> {
