@@ -1,5 +1,5 @@
 [package]
-name = "pipeviewer"
+name = "flo-pv"
 version = "0.1.0"
 authors = ["florin <florinutz@gmail.com>"]
 edition = "2018"

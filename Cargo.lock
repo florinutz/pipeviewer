@@ -165,6 +165,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "flo-pv"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "crossbeam",
+ "crossterm",
+]
+
+[[package]]
 name = "fuchsia-zircon"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -317,15 +326,6 @@ dependencies = [
  "redox_syscall",
  "smallvec",
  "winapi 0.3.8",
-]
-
-[[package]]
-name = "pipeviewer"
-version = "0.1.0"
-dependencies = [
- "clap",
- "crossbeam",
- "crossterm",
 ]
 
 [[package]]

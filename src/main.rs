@@ -1,5 +1,5 @@
 use crossbeam::channel::{bounded, unbounded};
-use pipeviewer::{args::Args, read, stats, write};
+use flo_pv::{args::Args, read, stats, write};
 use std::io::Result;
 use std::thread;
 
