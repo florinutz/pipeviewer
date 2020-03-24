@@ -64,6 +64,24 @@ impl TimeOutput for u64 {
     fn as_time(&self) -> String {
         let (hours, left) = (*self / 3600, *self % 3600);
         let (minutes, seconds) = (left / 60, left % 60);
-        format!("{}:{:02}:{02}", hours, minutes, seconds)
+        format!("{}:{:02}:{:02}", hours, minutes, seconds)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::TimeOutput;
+
+    #[test]
+    fn as_time_format() {
+        let pairs = vec![
+            (5_u64, "0:00:05"),
+            (60_u64, "0:01:00"),
+            (154_u64, "0:02:34"),
+            (3603_u64, "1:00:03"),
+        ];
+        for (input, output) in pairs {
+            assert_eq!(input.as_time().as_str(), output)
+        }
     }
 }
